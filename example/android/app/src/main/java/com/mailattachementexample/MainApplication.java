@@ -1,4 +1,4 @@
-package com.mailattachementexample;
+package com.mailattachmentexample;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

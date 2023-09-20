@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-mail-attachement": ["./src/index"]
+      "react-native-mail-attachment": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

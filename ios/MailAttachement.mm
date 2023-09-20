@@ -2,9 +2,13 @@
 
 @interface RCT_EXTERN_MODULE(MailAttachement, NSObject)
 
-RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
-                 withRejecter:(RCTPromiseRejectBlock)reject)
+RCT_EXTERN_METHOD(sendEmailWithAttachment:(NSString *)recipient
+                        subject:(NSString *)subject
+                           body:(NSString *)body
+                 attachmentUri:(NSString *)attachmentUri
+                      resolver:(RCTPromiseResolveBlock)resolve
+                      rejecter:(RCTPromiseRejectBlock)reject)
+
 
 + (BOOL)requiresMainQueueSetup
 {
@@ -12,3 +16,6 @@ RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
 }
 
 @end
+
+
+

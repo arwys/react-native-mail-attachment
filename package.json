@@ -1,15 +1,18 @@
 {
-  "name": "react-native-mail-attachement",
-  "version": "0.1.0",
-  "description": "send email with attachement",
-  "main": "lib/commonjs/index",
-  "module": "lib/module/index",
+  "name": "react-native-mail-attachment",
+  "version": "0.0.1",
+  "description": "send email with attachment",
+  "main": "lib/commonjs/index.js",
+  "module": "lib/module/index.js",
   "types": "lib/typescript/src/index.d.ts",
-  "react-native": "src/index",
-  "source": "src/index",
+  "react-native": "src/index.tsx",
+  "source": "src/index.tsx",
   "files": [
     "src",
     "lib",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
     "android",
     "ios",
     "cpp",
@@ -21,9 +24,6 @@
     "!android/gradlew",
     "!android/gradlew.bat",
     "!android/local.properties",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
     "!**/.*"
   ],
   "scripts": {
@@ -34,7 +34,7 @@
     "release": "release-it",
     "example": "yarn --cwd example",
     "build:android": "cd example/android && ./gradlew assembleDebug --no-daemon --console=plain -PreactNativeArchitectures=arm64-v8a",
-    "build:ios": "cd example/ios && xcodebuild -workspace MailAttachementExample.xcworkspace -scheme MailAttachementExample -configuration Debug -sdk iphonesimulator CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO",
+    "build:ios": "cd example/ios && xcodebuild -workspace MailattachmentExample.xcworkspace -scheme MailattachmentExample -configuration Debug -sdk iphonesimulator CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO",
     "bootstrap": "yarn example && yarn install && yarn example pods",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build"
   },
@@ -43,13 +43,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/arwysyah/react-native-mail-attachement",
-  "author": "arwys <arwysyahputrasiregar@gmail.com> (https://github.com/arwysyah)",
+  "repository": "https://github.com/arwysyah/react-native-mail-attachment",
+  "author": "arwysyah <arwysyahputrasiregar@gmail.com> (https://github.com/arwysyah)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/arwysyah/react-native-mail-attachement/issues"
+    "url": "https://github.com/arwysyah/react-native-mail-attachment/issues"
   },
-  "homepage": "https://github.com/arwysyah/react-native-mail-attachement#readme",
+  "homepage": "https://github.com/arwysyah/react-native-mail-attachment#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -71,7 +71,7 @@
     "prettier": "^2.0.5",
     "react": "18.2.0",
     "react-native": "0.72.4",
-    "react-native-builder-bob": "^0.20.0",
+    "react-native-builder-bob": "^0.22.0",
     "release-it": "^15.0.0",
     "turbo": "^1.10.7",
     "typescript": "^5.0.2"
@@ -152,12 +152,7 @@
     "targets": [
       "commonjs",
       "module",
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
+      "typescript"
     ]
   }
 }

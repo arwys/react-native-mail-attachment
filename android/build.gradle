@@ -23,11 +23,11 @@ if (isNewArchitectureEnabled()) {
 }
 
 def getExtOrDefault(name) {
-  return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties["MailAttachement_" + name]
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties["Mailattachment_" + name]
 }
 
 def getExtOrIntegerDefault(name) {
-  return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties["MailAttachement_" + name]).toInteger()
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties["Mailattachment_" + name]).toInteger()
 }
 
 def supportsNamespace() {
@@ -45,7 +45,7 @@ def supportsNamespace() {
 
 android {
   if (supportsNamespace()) {
-    namespace "com.mailattachement"
+    namespace "com.mailattachment"
 
     sourceSets {
       main {
@@ -88,13 +88,13 @@ dependencies {
   // For < 0.71, this will be from the local maven repo
   // For > 0.71, this will be replaced by `com.facebook.react:react-android:$version` by react gradle plugin
   //noinspection GradleDynamicVersion
-  implementation "com.facebook.react:react-native:+"
+  implementation 'com.facebook.react:react-native:+'
 }
 
 if (isNewArchitectureEnabled()) {
   react {
     jsRootDir = file("../src/")
-    libraryName = "MailAttachement"
-    codegenJavaPackageName = "com.mailattachement"
+    libraryName = "Mailattachment"
+    codegenJavaPackageName = "com.mailattachment"
   }
 }

@@ -73,9 +73,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.mailattachementexample"
+    namespace "com.mailattachmentexample"
     defaultConfig {
-        applicationId "com.mailattachementexample"
+        applicationId "com.mailattachmentexample"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -1,4 +1,4 @@
-package com.mailattachement;
+package com.mailattachment;
 
 import androidx.annotation.NonNull;
 
@@ -11,12 +11,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MailAttachementPackage implements ReactPackage {
+public class MailAttachmentPackage implements ReactPackage {
   @NonNull
   @Override
   public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
     List<NativeModule> modules = new ArrayList<>();
-    modules.add(new MailAttachementModule(reactContext));
+    modules.add(new MailAttachmentModule(reactContext));
     return modules;
   }
 
