@@ -1,6 +1,6 @@
 {
   "name": "react-native-mail-attachment",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "send email with attachment",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
