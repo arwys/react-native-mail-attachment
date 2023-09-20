@@ -2,8 +2,8 @@
 @objc(MailAttachement)
 class MailAttachement: NSObject {
 
-  @objc(sendEmailWithAttachment:subject:body:attachmentUri:resolver:rejecter:)
-    func sendEmailWithAttachment(_ recipient: String, subject: String, body: String, attachmentUri: String, resolver: @escaping RCTPromiseResolveBlock, rejecter: @escaping RCTPromiseRejectBlock)  {
+  @objc(sendEmailWithAttachment:attachmentUri:subject:body:resolver:rejecter:)
+    func sendEmailWithAttachment(attachmentUri: String ,  recipient: String, subject: String, body: String,  resolver: @escaping RCTPromiseResolveBlock, rejecter: @escaping RCTPromiseRejectBlock)  {
       if let recipientEncoded = recipient.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
     let subjectEncoded = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
     let bodyEncoded = body.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),

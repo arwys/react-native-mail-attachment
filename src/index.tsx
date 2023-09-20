@@ -19,7 +19,7 @@ export const pickFile = async (): Promise<string | undefined> => {
       return;
     }
   } else {
-    console.error('Unfortunetely IOS has not supported yetx');
+    console.error('Unfortunetely IOS has not supported yet');
     return;
   }
 };
@@ -30,10 +30,8 @@ export const sendEmailWithAttachment = (
   subject: string = '',
   body: string = ''
 ) => {
-  const pdfUri = URI;
-
   if (!URI) throw new Error('Please Provide the URI ');
-  else MailAttachment.sendEmailWithAttachment(recipient, subject, body, pdfUri);
+  else MailAttachment.sendEmailWithAttachment(URI, recipient, subject, body);
 };
 
 class MailAttachmentClass {
@@ -47,7 +45,7 @@ class MailAttachmentClass {
     subject: string = '',
     body: string = ''
   ) {
-    await sendEmailWithAttachment(recipient, subject, body, URI);
+    await sendEmailWithAttachment(URI, recipient, subject, body);
   }
 }
 

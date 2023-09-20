@@ -55,7 +55,7 @@ public class MailAttachmentModule extends ReactContextBaseJavaModule {
   // See https://reactnative.dev/docs/native-modules-android
 
   @ReactMethod
-  public void sendEmailWithAttachment(String recipient, String subject, String body, String attachmentUri, Promise promise) {
+  public void sendEmailWithAttachment(String attachmentUri, String recipient, String subject, String body, Promise promise) {
     try {
       Intent emailIntent = new Intent(Intent.ACTION_SEND);
       emailIntent.setType("text/plain");

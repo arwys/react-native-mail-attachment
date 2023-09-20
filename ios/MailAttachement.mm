@@ -2,10 +2,11 @@
 
 @interface RCT_EXTERN_MODULE(MailAttachement, NSObject)
 
-RCT_EXTERN_METHOD(sendEmailWithAttachment:(NSString *)recipient
+RCT_EXTERN_METHOD(sendEmailWithAttachment:
+          attachmentUri:(NSString *)attachmentUri
+          recipient:(NSString *)recipient
                         subject:(NSString *)subject
                            body:(NSString *)body
-                 attachmentUri:(NSString *)attachmentUri
                       resolver:(RCTPromiseResolveBlock)resolve
                       rejecter:(RCTPromiseRejectBlock)reject)
 
